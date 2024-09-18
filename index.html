@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A brief overview of my portfolio showcasing projects and contact information.">
+  <title>My Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body     body {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      padding: 20px; /* Padding for small screens */
+    }
+    .profile-pic {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px; /* Space between boxes */
+      max-width: 1200px; /* Maximum width for the layout */
+      width: 100%; /* Full width */
+      position: relative; /* Keep position relative for absolute elements */
+      margin-top: 180px; /* Space for the profile picture */
+    }
+    .neon-border {
+      border: 2px solid #39ff14;
+      padding: 20px;
+      box-sizing: border-box; /* Ensure padding is included in width */
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    }
+    .social-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+    .social-icons img {
+      width: 40px;
+      margin: 0 10px;
+    }
+    a {
+      color: #39ff14;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+
+
+</head>
+<body>
+  <img src="https://i.postimg.cc/x1WCb10W/IMG-20240911-WA0064.jpg" alt="Your Picture" class="profile-pic">
+  
+  <div class="neon-border">
+    <h2>About Me</h2>
+    <p>Hello! I'm a first-year student passionate about technology and problem-solving. As a tech enthusiast, I thrive on challenges and enjoy finding innovative solutions to complex issues. My goal is to crack into MNCs where I can apply my skills and contribute to meaningful projects.
+
+        I believe that problem-solving is not just about finding answers, but about understanding people’s needs and improving their experiences. I'm eager to collaborate with others and leverage my skills to make a positive impact. Let's connect and work together to tackle the challenges of tomorrow!
+        
+        </p>
+  </div>
+  <div class="neon-border"> 
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="http://crisohews.github.io/webGame" target="_blank">Rock Paper Scissors Game</a></li>
+      <li><a href="project-link-2" target="_blank">Project Title 2</a></li>
+      <li><a href="project-link-3" target="_blank">Project Title 3</a></li>
+    </ul>
+  </div>
+  <div class="neon-border">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="text-center social-icons" style="position: absolute; bottom: 10px; right: 10px;">
+    <a href="https://www.facebook.com/antinutrino.hews?mibextid=ZbWKwL" target="_blank"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook Icon"></a>
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2FAishik_Hews" target="_blank"><img src="https://img.icons8.com/?size=100&id=13963&format=png&color=000000" alt="Twitter Icon"></a>
+    <a href="https://www.linkedin.com/in/aishik-mondal-55b849256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=" target="_blank"><img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn Icon"></a>
+    <a href="https://github.com/AishikMondal" target="_blank"><img src="https://img.icons8.com/?size=100&id=12598&format=png&color=ffffff" alt="GitHub Icon"></a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+      const name = $('#name').val();
+      const email = $('#email').val();
+      const message = $('#message').val();
+      alert('Thank you for contacting me, ' + name + '!');
+    });
+  </script>
+</body>
+</html>
